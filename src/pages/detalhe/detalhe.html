@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title style="text-align: center;">Produtos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of treinos | async">
+
+      <ion-item>
+        <br>
+        <h1>{{ item.data.categoryName }}</h1>
+        <p> Descrição: {{ item.data.descricao }}</p>
+        <p>Quantidade: {{ item.data.quantidade }}</p>
+      </ion-item>
+
+
+
+      <ion-item-options side="left">
+        <button ion-button color="secondary" (click)="editItemProdutos(item)"><ion-icon name="create"></ion-icon>Editar</button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeItemProdutos(item.data, item.data.imgUrl != ' ')"><ion-icon name="trash"></ion-icon>Rmv</button>
+
+
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="dark" (click)="newDetail()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

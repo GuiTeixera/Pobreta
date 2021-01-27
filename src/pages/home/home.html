@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align: center;">Pobreta</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h6 style="text-align: center;">Bem vindo, {{userName}}</h6>
+
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let categoria of categorias | async">
+        <ion-item>
+          <br>
+          <h2 (click)="listProdutos(categoria)">{{categoria.nome}}</h2>
+
+        </ion-item>
+
+      <ion-item-options side="left">
+        <button ion-button color="secundary" (click)="editCategory(categoria)"><ion-icon name="create"></ion-icon>Editar</button>
+      </ion-item-options>
+
+      <ion-item-options side="right">
+        <button ion-button color="danger" (click)="removeCategory(categoria.key)"><ion-icon name="trash"></ion-icon>Remover</button>
+      </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+
+  <ion-fab right bottom>
+    <button ion-fab color="dark" (click)="newCategory()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

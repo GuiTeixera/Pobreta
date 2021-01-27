@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title style="text-align: center;">Nova categoria</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="form">
+      <ion-item>
+        <ion-label stacked> Categoria dos Produtos </ion-label>
+        <ion-input type="text" formControlName="nome"></ion-input>
+      </ion-item>
+
+      <!-- <ion-item *ngIf="!form.controls.nome.valid && (form.controls.nome.dirty || form.controls.nome.touched)" color="danger">
+        <div [hidden]="!form.controls.nome.errors.required">
+          O Campo é Obrigatório
+        </div>
+      </ion-item> -->
+
+      <!-- <ion-item>
+        <ion-label stacked> Nome do Exercicio </ion-label>
+        <ion-input type="text" formControlName="exercicio"></ion-input>
+      </ion-item> -->
+
+
+      <div padding>
+          <button ion-button block color="dark" type="submit" (click)="onSubmit()" [disabled]="!form.valid" round>Salvar</button>
+        </div>
+  </form>
+</ion-content>
