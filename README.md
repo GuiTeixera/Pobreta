@@ -1,2 +1,12 @@
 # Pobreta
-Projeto desenvolvido por experiencia com ionic 3, typescript, angular, node, cordova e firebase.  Em desenvolvimento.
+![Pobreta](https://github.com/GuiTeixera/Pobreta/blob/main/src/assets/imgs/login.png) <br>
+EM DESENVOLVIMENTO. <br>
+Desenvolvido como liguagem:
+<ul>
+  <li>Ionic 3</li>
+  <li>Angular</li>
+  <li>NodeJs</li>
+  <li>Cordova</li>
+</ul>
+Banco de  de dados:
+<ul><li>Firebase</li></ul>
